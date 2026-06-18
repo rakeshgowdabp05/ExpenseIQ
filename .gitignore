@@ -1,0 +1,32 @@
+
+# Local generated audit/review files
+*_current-code.txt
+*current-code.txt
+*current*.txt
+*inspection.txt
+*audit*.txt
+*report*.txt
+*report*.json
+*screenshots.zip
+FINAL_*.txt
+EXPENSEIQ_PRODUCTION_*.txt
+test-*.ps1
+_local-audit-archive/
+
+# Local runtime storage
+storage/
+et-backend/target/
+et-frontend/dist/
+et-frontend/node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local audit folders/files
+authenticated-mobile-audit-screenshots/
+mobile-audit-screenshots/
+cors-env-security-check.txt
+EXPENSEIQ_PRODUCTION_CORRECTION_VERIFICATION.md
+*.log
