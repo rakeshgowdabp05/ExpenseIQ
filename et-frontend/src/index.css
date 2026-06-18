@@ -1436,3 +1436,56 @@ button:disabled {
     transform: none !important;
   }
 }
+
+/* ExpenseIQ reports action toolbar polish */
+.report-action-toolbar {
+  align-self: stretch;
+}
+
+.report-action-toolbar > button {
+  min-height: 3rem !important;
+  border-radius: 1rem !important;
+  padding-inline: 1rem !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  font-size: 0.82rem !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.01em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.55rem !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.report-action-toolbar > button:first-child {
+  min-width: 10.5rem !important;
+}
+
+.report-action-toolbar > button:not(:first-child) {
+  min-width: 8.85rem !important;
+}
+
+.report-action-toolbar > button svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  flex-shrink: 0 !important;
+}
+
+.report-action-toolbar > button:disabled {
+  box-shadow: none !important;
+}
+
+@media (min-width: 1024px) {
+  .report-action-toolbar {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 640px) {
+  .report-action-toolbar > button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
