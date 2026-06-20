@@ -410,7 +410,7 @@ function HeroSection() {
     <section className="marketing-hero marketing-inverse relative overflow-hidden bg-[#1f55cf] text-white">
       <HeroLineArt />
 
-      <div className="marketing-container marketing-hero-grid relative z-10 grid min-w-0 items-center gap-14 py-20 sm:py-24 lg:grid-cols-[minmax(0,1.08fr)_minmax(460px,0.82fr)] lg:gap-20 lg:py-28">
+      <div className="marketing-container marketing-hero-grid relative z-10 grid min-w-0 items-center gap-10 py-14 sm:py-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(460px,0.82fr)] lg:gap-16 lg:py-20">
         <motion.div
           initial={
             reduceMotion
@@ -713,7 +713,7 @@ function MarketingInput({
 
 function ProductStrip() {
   return (
-    <section className="border-b border-slate-200 bg-white py-10">
+    <section className="border-b border-slate-200 bg-white py-6">
       <div className="marketing-container grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
           ["Accounts", "Know exactly where money is available"],

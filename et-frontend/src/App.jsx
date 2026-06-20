@@ -1,11 +1,13 @@
 import {
   lazy,
   Suspense,
+  useEffect,
 } from "react";
 import {
   Navigate,
   Route,
   Routes,
+  useLocation,
 } from "react-router";
 
 import {
@@ -72,10 +74,13 @@ const TransactionsPage = lazy(() =>
 
 export default function App() {
   return (
-    <Suspense
-      fallback={<RouteLoadingScreen />}
-    >
-      <Routes>
+    <>
+      <BodyRouteClass />
+
+      <Suspense
+        fallback={<RouteLoadingScreen />}
+      >
+        <Routes>
         <Route
           path={appRoutes.root}
           element={<LandingPage />}
@@ -175,9 +180,32 @@ export default function App() {
             />
           }
         />
-      </Routes>
-    </Suspense>
+        </Routes>
+      </Suspense>
+    </>
   );
+}
+
+function BodyRouteClass() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const isLandingRoute =
+      location.pathname === appRoutes.root;
+
+    document.body.classList.toggle(
+      "expenseiq-landing-route",
+      isLandingRoute,
+    );
+
+    return () => {
+      document.body.classList.remove(
+        "expenseiq-landing-route",
+      );
+    };
+  }, [location.pathname]);
+
+  return null;
 }
 
 function RouteLoadingScreen() {

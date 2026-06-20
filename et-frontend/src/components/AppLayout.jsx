@@ -126,7 +126,7 @@ import {
     );
   
     return (
-      <div className="min-h-dvh bg-[#f5f7fb] text-slate-950 dark:bg-[#070b14] dark:text-white">
+      <div className="expenseiq-app-shell min-h-dvh bg-[#f5f7fb] text-slate-950 dark:bg-[#070b14] dark:text-white">
         <DesktopSidebar
           user={user}
           onLogout={handleLogout}
@@ -143,7 +143,7 @@ import {
         </AnimatePresence>
   
         <div className="min-h-dvh lg:pl-72">
-          <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl dark:border-slate-800 dark:bg-[#0b1220]/85">
+          <header className="expenseiq-app-topbar sticky top-0 z-30 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl dark:border-slate-800 dark:bg-[#0b1220]/85">
             <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
               <div className="flex min-w-0 flex-wrap items-center gap-3">
                 <button
@@ -204,7 +204,7 @@ import {
             </div>
           </header>
   
-          <main className="px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+          <main className="expenseiq-app-main px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
             <Outlet />
           </main>
         </div>
@@ -217,7 +217,7 @@ import {
     onLogout,
   }) {
     return (
-      <aside className="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col border-r border-white/10 bg-[#071426] text-white lg:flex">
+      <aside className="expenseiq-sidebar fixed inset-y-0 left-0 z-40 hidden w-72 flex-col border-r border-white/10 bg-[#071426] text-white lg:flex">
         <SidebarContent
           user={user}
           onLogout={onLogout}
